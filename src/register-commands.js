@@ -14,6 +14,23 @@ const commands = [
             },
         ],
     },
+    {
+        name: 'ytnotifications',
+        description: 'Turns on youtube notifications',
+        options: [
+            {
+                name: 'truefalse',
+                description: 'turns channel on and off',
+                type: ApplicationCommandOptionType.Boolean,
+                required: true,
+            },
+            {
+                name: 'channel-id',
+                description: 'ID of the channel',
+                type: ApplicationCommandOptionType.String,
+            },
+        ],
+    },
 ];
 
 const rest = new REST({version: '10'}).setToken(process.env.TOKEN);
